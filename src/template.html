@@ -1,0 +1,16 @@
+<tabs-clab 
+    labels='["First", "Second", "Third"]'
+    on-change="_changeTab"
+></tabs-clab>
+
+<template is="dom-if" if="[[_show(active,0)]]">
+    <p>first content</p>
+</template>
+
+<template is="dom-if" if="[[_show(active,1)]]">
+    <p>second content</p>
+</template>
+
+<template is="dom-if" if="[[_show(active,2)]]">
+    <p>third content</p>
+</template>

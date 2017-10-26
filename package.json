@@ -1,0 +1,20 @@
+{
+  "name": "tabs-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.contactlab.com/product-devs/tabs-example",
+  "author": "Salvatore Laisa <salvatore.laisa@contactlab.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "dependencies": {
+    "@polymer/polymer": "next",
+    "contactlab-ui-components": "2.0"
+  },
+  "devDependencies": {
+    "text-loader": "^0.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  }
+}
