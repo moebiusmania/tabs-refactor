@@ -4,6 +4,7 @@ import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import template from './template.html';
 import '@polymer/polymer/lib/elements/dom-if';
 import 'contactlab-ui-components/src/tabs';
+import 'contactlab-ui-components/src/calendar';
 
 class TabsExample extends PolymerElement {
 
