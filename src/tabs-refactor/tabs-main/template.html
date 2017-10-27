@@ -1,0 +1,10 @@
+<div class$="[[_computeType(pills, vertical, centered, fullWidth)]]">
+    <ul>
+        <template is="dom-repeat" items="[[labels]]">
+            <li class$="[[_computeActive(active,index)]]" data-index$="[[index]]">
+                <a on-click="_activateThis">[[item]]</a>
+            </li>
+        </template>
+    </ul>
+    <slot></slot>
+</div>
