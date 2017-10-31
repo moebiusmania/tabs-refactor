@@ -16,47 +16,39 @@ class TabsMain extends PolymerElement {
 
     _activateThis(evt) {
         evt ? evt.preventDefault() : null;
-        this.active = parseInt(evt.currentTarget.parentNode.getAttribute('data-index'));
-        this._setActive();
+        this.active = parseInt(evt.currentTarget.dataset.index);
+        this._setActive(this.active);
     }
 
-    _setActive(){
-        console.log(this.querySelectorAll('tab-content'));
+    _setActive(index){
         const tabs = this.querySelectorAll('tab-content');
         tabs.forEach((e,i) => {
-            i === this.active ? e.visible = true : e.visible = false;
-            console.log(e,i,e.visible);
+            i === index ? e.visible = true : e.visible = false;
         });
         this.dispatchEvent(new CustomEvent('change', {
             bubbles: true,
             composed: true,
             detail: {
-                active: this.active
+                active: index
             }
         }));
     }
 
     _computeType(pills, vertical, centered, fullWidth) {
-        let arr = [];
-        pills ? arr.push('pills') : arr.push('tabs');
-        if (vertical) arr.push('vertical');
-        if (centered) arr.push('centered');
-        if (fullWidth) arr.push('full-width');
+        const arr = pills ? ['pills'] : ['tabs'];
+        vertical ? arr.push('vertical') : null;
+        centered ? arr.push('centered') : null;
+        fullWidth ? arr.push('full-width') : null;
         return arr.join(' ');
     }
 
     _computeActive(active, index) {
-        let arr = ['tab'];
-        if (active === index) {
-            arr.push('active');
-            this.set('current', this.labels[active]);
-        };
-        return arr.join(' ');
+        return (active === index) ? 'tab active' : 'tab';
     }
 
     connectedCallback() {
         super.connectedCallback();
-        this._setActive();
+        this._setActive(this.active);
     }
 }
 

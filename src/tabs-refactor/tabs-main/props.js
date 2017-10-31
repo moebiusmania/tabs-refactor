@@ -23,11 +23,6 @@ export default {
     },
     active: {
         type: Number,
-        value: 0,
-        notify: true
-    },
-    current: {
-        type: String,
-        notify: true
+        value: 0
     }
 }
