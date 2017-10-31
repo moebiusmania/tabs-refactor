@@ -27,7 +27,7 @@ Since for now this is a POC there is no standalone file, you must import the mai
         <p>Some content for tab One</p>
     </tab-content>
     <tab-content>
-        <p>Some content for tab One</p>
+        <p>Other content for tab Two</p>
     </tab-content>
 <tabs-main>
 ```
