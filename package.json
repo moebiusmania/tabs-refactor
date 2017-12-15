@@ -9,8 +9,7 @@
     "start": "webpack-dev-server --hot"
   },
   "dependencies": {
-    "@polymer/polymer": "next",
-    "contactlab-ui-components": "2.0"
+    "hyperhtml-element": "^1.3.0"
   },
   "devDependencies": {
     "text-loader": "^0.0.1",
