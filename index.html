@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tabs refactor</title>
+
+  <link rel="stylesheet" href="./contactlab-pattern.min.css">
+  
+  <script>
+    window.ShadyDOM = { force: true };
+    window.customElements = { forcePolyfill: true };
+
+    window.addEventListener('WebComponentsReady', () => {
+      const script = document.createElement('script');
+      script.src = './bundle.js';
+      document.body.appendChild(script);
+    });
+  </script>
+  <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/master/webcomponents-sd-ce.js"></script>
+</head>
+<body>
+    
+  <h2>Tabs refactor</h2>
+
+  <tabs-main labels='["New test", "Other test", "Another test"]'>
+    <tab-content>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolore ab animi, explicabo sequi, iste dolor exercitationem sapiente facere quisquam pariatur tempore nam reprehenderit suscipit quibusdam atque eius possimus accusamus!</p>
+    </tab-content>
+    <tab-content>
+      <p>other content</p>
+    </tab-content>
+    <tab-content>
+      <p>some other content just for test purpose</p>
+    </tab-content>
+  </tabs-main>
+
+</body>
+</html>
