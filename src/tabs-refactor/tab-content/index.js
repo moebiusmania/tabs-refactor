@@ -1,25 +1,18 @@
 'use strict';
 
-import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
-import template from './template.html';
-import '@polymer/polymer/lib/elements/dom-if';
+import { LitElement, html } from '@polymer/lit-element';
 
-class TabContent extends PolymerElement {
+class TabContent extends LitElement {
 
-    static get is() { return 'tab-content'; }
+  static get is() { return 'tab-content'; }
 
-    static get template() { return template ; }
-
-    static get properties() {
-        return {
-            visible: {
-                type: Boolean,
-                value: false
-            }
-        };
-    }
-
-    
+  static get properties() { return { visible: Boolean }; }  
+  
+  _render({ visible }){
+    return html`
+      ${visible ? html`<slot></slot>` : ''}
+    `;
+  }
 }
 
 customElements.define(TabContent.is, TabContent);
