@@ -7,6 +7,8 @@ class TabContent extends LitElement {
   static get is() { return 'tab-content'; }
 
   static get properties() { return { visible: Boolean }; }  
+
+  // _createRoot() { return this; }
   
   _render({ visible }){
     return html`
